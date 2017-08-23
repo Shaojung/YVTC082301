@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click1(View v)
     {
-        Intent it = new Intent(MainActivity.this, DetailActivity.class);
+        Intent it = new Intent(MainActivity.this, MainActivity.class);
         PendingIntent pi = PendingIntent.getActivity(MainActivity.this, 1212, it, PendingIntent.FLAG_UPDATE_CURRENT);
 
         Notification.Builder builder = new Notification.Builder(MainActivity.this);
