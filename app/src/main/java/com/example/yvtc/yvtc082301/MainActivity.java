@@ -20,7 +20,12 @@ public class MainActivity extends AppCompatActivity {
         Notification.Builder builder = new Notification.Builder(MainActivity.this);
         builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("這是提醒")
-                .setContentText("這是提醒的內容");
+                .setContentText("這是提醒的內容")
+                .setOngoing(true);
         manager.notify(321, builder.build());
+    }
+    public void onCancel(View v)
+    {
+        manager.cancel(321);
     }
 }
